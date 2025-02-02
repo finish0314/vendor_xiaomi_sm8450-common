@@ -291,6 +291,8 @@ PRODUCT_PACKAGES += \
     libadm \
     libadsp_default_listener \
     libadsprpc \
+    libar-gsl \
+    libats \
     libaudio_log_utils \
     libbacklight-calib \
     libbluetooth_audio_session_qti \
@@ -362,6 +364,7 @@ PRODUCT_PACKAGES += \
     liblowi_common \
     liblowi_wifihal \
     liblqe \
+    liblx-osal \
     libmasc \
     libmcs \
     libmdmdetect \
