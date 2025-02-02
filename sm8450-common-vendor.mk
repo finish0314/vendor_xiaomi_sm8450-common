@@ -291,6 +291,7 @@ PRODUCT_PACKAGES += \
     libadm \
     libadsp_default_listener \
     libadsprpc \
+    libar-gpr \
     libar-gsl \
     libats \
     libaudio_log_utils \
@@ -364,6 +365,7 @@ PRODUCT_PACKAGES += \
     liblowi_common \
     liblowi_wifihal \
     liblqe \
+    liblx-ar_util \
     liblx-osal \
     libmasc \
     libmcs \
