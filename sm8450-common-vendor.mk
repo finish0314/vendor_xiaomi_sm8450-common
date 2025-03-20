@@ -262,7 +262,6 @@ PRODUCT_PACKAGES += \
     vulkan.adreno \
     jcos_nq_client \
     lib-imscommon \
-    libar-gsl \
     lib-imsdpl \
     lib-imsqimf \
     lib-imsrcsservice \
@@ -593,7 +592,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-V3-ndk \
     vendor.qti.gnss-V5-ndk \
     vendor.qti.gnss-service \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
