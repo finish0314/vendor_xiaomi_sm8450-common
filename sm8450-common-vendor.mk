@@ -262,6 +262,7 @@ PRODUCT_PACKAGES += \
     vulkan.adreno \
     jcos_nq_client \
     lib-imscommon \
+    libar-gsl \
     lib-imsdpl \
     lib-imsqimf \
     lib-imsrcsservice \
