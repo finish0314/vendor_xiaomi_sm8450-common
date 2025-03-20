@@ -12135,7 +12135,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libhardware",
                 "libbase",
-                "libar-gsl",
                 "vendor.qti.hardware.AGMIPC@1.0",
                 "libc++",
                 "libc",
