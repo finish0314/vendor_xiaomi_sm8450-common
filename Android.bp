@@ -2846,89 +2846,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libar-gpr",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-gpr.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-gsl",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-gsl.so",
-            ],
-            shared_libs: [
-                "liblx-ar_util",
-                "libar-gpr",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libats",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libats.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libdiag",
-                "libar-gsl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libaudio_log_utils",
     owner: "xiaomi",
     strip: {
@@ -5044,63 +4961,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblx-ar_util",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblx-ar_util.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblx-osal",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liblx-osal.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libdiag",
-                "libion",
-                "libpdmapper",
-                "libpdnotifier",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -11331,33 +11191,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libshoebox",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/soundfx/libshoebox.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "soundfx",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.display.color@1.0",
     owner: "xiaomi",
     strip: {
@@ -12280,6 +12113,39 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.AGMIPC@1.0-impl",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libhardware",
+                "libbase",
+                "libar-gsl",
+                "vendor.qti.hardware.AGMIPC@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -17373,6 +17239,204 @@ dex_import {
         "proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
     ],
     system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "10.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/10.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "11.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/11.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "12.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/12.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "13.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/13.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "14.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/14.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "6.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/6.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "7.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/7.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "8.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/8.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "9.0_config.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/config/9.0_config.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/config",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "0_initial_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "10_version_update_ecc_table.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "11_version_update_ecc_table.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "12_version_update_ecc_table.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "1_version_intro_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "2_version_add_wps_config_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "3_version_update_wps_config_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "4_version_update_ecc_table_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/4_version_update_ecc_table_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "5_version_update_ecc_table_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/5_version_update_ecc_table_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "6_version_change_property_table_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "7_version_update_ecc_table_qcrilnr.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "8_version_update_ecc_table.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "9_version_update_ecc_table.sql",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql",
+    filename_from_src: true,
+    sub_dir: "qcril_database/upgrade/other",
+    soc_specific: true,
 }
 
 prebuilt_etc_xml {

@@ -291,9 +291,6 @@ PRODUCT_PACKAGES += \
     libadm \
     libadsp_default_listener \
     libadsprpc \
-    libar-gpr \
-    libar-gsl \
-    libats \
     libaudio_log_utils \
     libbacklight-calib \
     libbluetooth_audio_session_qti \
@@ -365,8 +362,6 @@ PRODUCT_PACKAGES += \
     liblowi_common \
     liblowi_wifihal \
     liblqe \
-    liblx-ar_util \
-    liblx-osal \
     libmasc \
     libmcs \
     libmdmdetect \
@@ -569,7 +564,6 @@ PRODUCT_PACKAGES += \
     sensors.ultrasoundproximity \
     libasphere \
     libmisoundfx \
-    libshoebox \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
     vendor.display.color@1.2 \
@@ -598,6 +592,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-V3-ndk \
     vendor.qti.gnss-V5-ndk \
     vendor.qti.gnss-service \
+    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -794,6 +789,28 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsuce-V1.1-java \
     vendor.qti.ims.rcsuce-V1.2-java \
     vendor.qti.ims.rcsuceaidlservice-V1-java \
+    10.0_config.sql \
+    11.0_config.sql \
+    12.0_config.sql \
+    13.0_config.sql \
+    14.0_config.sql \
+    6.0_config.sql \
+    7.0_config.sql \
+    8.0_config.sql \
+    9.0_config.sql \
+    0_initial_qcrilnr.sql \
+    10_version_update_ecc_table.sql \
+    11_version_update_ecc_table.sql \
+    12_version_update_ecc_table.sql \
+    1_version_intro_qcrilnr.sql \
+    2_version_add_wps_config_qcrilnr.sql \
+    3_version_update_wps_config_qcrilnr.sql \
+    4_version_update_ecc_table_qcrilnr.sql \
+    5_version_update_ecc_table_qcrilnr.sql \
+    6_version_change_property_table_qcrilnr.sql \
+    7_version_update_ecc_table_qcrilnr.sql \
+    8_version_update_ecc_table.sql \
+    9_version_update_ecc_table.sql \
     android.hardware.security.keymint-service-qti.xml \
     c2_manifest_vendor.xml \
     c2_manifest_vendor_audio.xml \
